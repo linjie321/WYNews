@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+ 
+    [self addChildViewControllers];
 }
 
 - (void)addChildViewControllers {
