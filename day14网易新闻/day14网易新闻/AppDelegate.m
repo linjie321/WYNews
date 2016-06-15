@@ -17,10 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
+    [self setupAppearance];
+    
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
     
-    Class cls = NSClassFromString(@"WYMainViewController");
+    Class cls = NSClassFromString(@"WYNewsListViewController");
     UIViewController *vc = [cls new];
     
     _window.rootViewController = vc;
@@ -30,5 +33,10 @@
     return YES;
 }
 
+
+- (void)setupAppearance {
+   
+    [UITabBar appearance].tintColor = [UIColor cz_colorWithHex:0xDF0000];
+}
 
 @end
