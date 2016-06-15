@@ -12,6 +12,8 @@ static NSString *cellId = @"cellId";
 
 @interface WYNewsListViewController () <UITableViewDataSource>
 
+@property (nonatomic, weak) UITableView *tableView;
+
 @end
 
 @implementation WYNewsListViewController
@@ -61,7 +63,7 @@ static NSString *cellId = @"cellId";
     
     tv.dataSource = self;
     
-    
+    _tableView = tv;
     
 }
 

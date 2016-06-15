@@ -11,6 +11,7 @@
 @implementation CZNetworkManager
 
 + (instancetype)sharedManager {
+   
     static CZNetworkManager *instance;
     
     static dispatch_once_t onceToken;
