@@ -9,6 +9,7 @@
 #import "WYNewsListViewController.h"
 #import "WYNewsListItem.h"
 #import "WYNewsNormalCell.h"
+#import "WYNewsExtraImagesCell.h"
 #import <UIImageView+WebCache.h>
 
 
@@ -66,7 +67,9 @@ static NSString *cellId = @"cellId";
     
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
-    WYNewsNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+//    WYNewsNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    
+    WYNewsExtraImagesCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
     WYNewsListItem *model = _newsList[indexPath.row];
     
@@ -98,7 +101,9 @@ static NSString *cellId = @"cellId";
     
 //    [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
     
-    [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:cellId];
+//    [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:cellId];
+    
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsExtraImagesCell" bundle:nil] forCellReuseIdentifier:cellId];
     
     tv.estimatedRowHeight = 100;
     tv.rowHeight = UITableViewAutomaticDimension;

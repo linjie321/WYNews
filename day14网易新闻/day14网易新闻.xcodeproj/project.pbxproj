@@ -27,6 +27,8 @@
 		890334AA1D114D2B00DD58BC /* WYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890334A91D114D2B00DD58BC /* WYHomeViewController.m */; };
 		890334AD1D114D4200DD58BC /* WYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890334AC1D114D4200DD58BC /* WYMainViewController.m */; };
 		890334B31D11819D00DD58BC /* WYNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890334B21D11819D00DD58BC /* WYNewsListViewController.m */; };
+		89C9C89E1D12FA3600292A25 /* WYNewsExtraImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C9C89C1D12FA3600292A25 /* WYNewsExtraImagesCell.m */; };
+		89C9C8A11D13074400292A25 /* WYNewsExtraImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89C9C8A01D13074400292A25 /* WYNewsExtraImagesCell.xib */; };
 		89E60F611D127E9300E354C0 /* WYNewsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E60F601D127E9300E354C0 /* WYNewsListItem.m */; };
 		89E60F661D12BB5A00E354C0 /* WYNewsNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E60F641D12BB5A00E354C0 /* WYNewsNormalCell.m */; };
 		89E60F671D12BB5A00E354C0 /* WYNewsNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E60F651D12BB5A00E354C0 /* WYNewsNormalCell.xib */; };
@@ -76,6 +78,9 @@
 		890334AE1D11517400DD58BC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		890334B11D11819D00DD58BC /* WYNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListViewController.h; sourceTree = "<group>"; };
 		890334B21D11819D00DD58BC /* WYNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListViewController.m; sourceTree = "<group>"; };
+		89C9C89B1D12FA3600292A25 /* WYNewsExtraImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsExtraImagesCell.h; sourceTree = "<group>"; };
+		89C9C89C1D12FA3600292A25 /* WYNewsExtraImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsExtraImagesCell.m; sourceTree = "<group>"; };
+		89C9C8A01D13074400292A25 /* WYNewsExtraImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsExtraImagesCell.xib; sourceTree = "<group>"; };
 		89E60F5F1D127E9300E354C0 /* WYNewsListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListItem.h; sourceTree = "<group>"; };
 		89E60F601D127E9300E354C0 /* WYNewsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListItem.m; sourceTree = "<group>"; };
 		89E60F631D12BB5A00E354C0 /* WYNewsNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsNormalCell.h; sourceTree = "<group>"; };
@@ -268,6 +273,9 @@
 				89E60F631D12BB5A00E354C0 /* WYNewsNormalCell.h */,
 				89E60F641D12BB5A00E354C0 /* WYNewsNormalCell.m */,
 				89E60F651D12BB5A00E354C0 /* WYNewsNormalCell.xib */,
+				89C9C89B1D12FA3600292A25 /* WYNewsExtraImagesCell.h */,
+				89C9C89C1D12FA3600292A25 /* WYNewsExtraImagesCell.m */,
+				89C9C8A01D13074400292A25 /* WYNewsExtraImagesCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89E60F671D12BB5A00E354C0 /* WYNewsNormalCell.xib in Resources */,
+				89C9C8A11D13074400292A25 /* WYNewsExtraImagesCell.xib in Resources */,
 				890334601D1147B600DD58BC /* LaunchScreen.storyboard in Resources */,
 				8903345D1D1147B600DD58BC /* Assets.xcassets in Resources */,
 			);
@@ -403,6 +412,7 @@
 				8903349A1D114A7C00DD58BC /* UILabel+CZAddition.m in Sources */,
 				890334981D114A7C00DD58BC /* UIButton+CZAddition.m in Sources */,
 				89E60F611D127E9300E354C0 /* WYNewsListItem.m in Sources */,
+				89C9C89E1D12FA3600292A25 /* WYNewsExtraImagesCell.m in Sources */,
 				890334AD1D114D4200DD58BC /* WYMainViewController.m in Sources */,
 				890334941D114A7C00DD58BC /* NSObject+CZRuntime.m in Sources */,
 				890334951D114A7C00DD58BC /* NSString+CZBase64.m in Sources */,
