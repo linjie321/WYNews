@@ -33,9 +33,9 @@ static NSString *cellId = @"cellId";
 
 - (void)loadData {
     
-    [CZNetworkManager sharedManager] newsListWithChannel:@"T1238649079062" start:0 completion:^(NSArray *array, NSError *error) {
+    [[CZNetworkManager sharedManager] newsListWithChannel:@"T1238649079062" start:0 completion:^(NSArray *array, NSError *error) {
         NSLog(@"array");
-    }
+    }];
     
     
 }
