@@ -28,6 +28,8 @@
 		890334AD1D114D4200DD58BC /* WYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890334AC1D114D4200DD58BC /* WYMainViewController.m */; };
 		890334B31D11819D00DD58BC /* WYNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890334B21D11819D00DD58BC /* WYNewsListViewController.m */; };
 		89E60F611D127E9300E354C0 /* WYNewsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E60F601D127E9300E354C0 /* WYNewsListItem.m */; };
+		89E60F661D12BB5A00E354C0 /* WYNewsNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E60F641D12BB5A00E354C0 /* WYNewsNormalCell.m */; };
+		89E60F671D12BB5A00E354C0 /* WYNewsNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89E60F651D12BB5A00E354C0 /* WYNewsNormalCell.xib */; };
 		D951913C92D41E3B5975D137 /* libPods-day14网易新闻.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB6790C020C65454B497FB /* libPods-day14网易新闻.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,9 @@
 		890334B21D11819D00DD58BC /* WYNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListViewController.m; sourceTree = "<group>"; };
 		89E60F5F1D127E9300E354C0 /* WYNewsListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListItem.h; sourceTree = "<group>"; };
 		89E60F601D127E9300E354C0 /* WYNewsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListItem.m; sourceTree = "<group>"; };
+		89E60F631D12BB5A00E354C0 /* WYNewsNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsNormalCell.h; sourceTree = "<group>"; };
+		89E60F641D12BB5A00E354C0 /* WYNewsNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsNormalCell.m; sourceTree = "<group>"; };
+		89E60F651D12BB5A00E354C0 /* WYNewsNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsNormalCell.xib; sourceTree = "<group>"; };
 		97423FE62331E94B76482F64 /* Pods-day14网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day14网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-day14网易新闻/Pods-day14网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
 		D8C8F9E23109D86D99BE1191 /* Pods-day14网易新闻.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day14网易新闻.release.xcconfig"; path = "Pods/Target Support Files/Pods-day14网易新闻/Pods-day14网易新闻.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -240,6 +245,7 @@
 		890334B01D11816200DD58BC /* NewsList */ = {
 			isa = PBXGroup;
 			children = (
+				89E60F621D12BB2000E354C0 /* View */,
 				89E60F5E1D127E5E00E354C0 /* Model */,
 				890334B11D11819D00DD58BC /* WYNewsListViewController.h */,
 				890334B21D11819D00DD58BC /* WYNewsListViewController.m */,
@@ -254,6 +260,16 @@
 				89E60F601D127E9300E354C0 /* WYNewsListItem.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		89E60F621D12BB2000E354C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89E60F631D12BB5A00E354C0 /* WYNewsNormalCell.h */,
+				89E60F641D12BB5A00E354C0 /* WYNewsNormalCell.m */,
+				89E60F651D12BB5A00E354C0 /* WYNewsNormalCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E60F671D12BB5A00E354C0 /* WYNewsNormalCell.xib in Resources */,
 				890334601D1147B600DD58BC /* LaunchScreen.storyboard in Resources */,
 				8903345D1D1147B600DD58BC /* Assets.xcassets in Resources */,
 			);
@@ -392,6 +409,7 @@
 				890334AA1D114D2B00DD58BC /* WYHomeViewController.m in Sources */,
 				8903349D1D114A7C00DD58BC /* UIViewController+CZAddition.m in Sources */,
 				8903349C1D114A7C00DD58BC /* UIView+CZAddition.m in Sources */,
+				89E60F661D12BB5A00E354C0 /* WYNewsNormalCell.m in Sources */,
 				890334931D114A7C00DD58BC /* NSAttributedString+CZAdditon.m in Sources */,
 				890334991D114A7C00DD58BC /* UIColor+CZAddition.m in Sources */,
 				890334551D1147B600DD58BC /* AppDelegate.m in Sources */,
