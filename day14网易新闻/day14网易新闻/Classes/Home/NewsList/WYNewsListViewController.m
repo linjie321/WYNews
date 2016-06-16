@@ -8,6 +8,8 @@
 
 #import "WYNewsListViewController.h"
 #import "WYNewsListItem.h"
+#import "WYNewsNormalCell.h"
+#import <UIImageView+WebCache.h>
 
 
 static NSString *cellId = @"cellId";
@@ -62,10 +64,21 @@ static NSString *cellId = @"cellId";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    
+    WYNewsNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    
+    WYNewsListItem *model = _newsList[indexPath.row];
+    
+    cell.titleLabel.text = model.title;
+    cell.sourceLabel.text = model.source;
+    cell.replyLabel.text = @(model.replyCount).description;
+    
+    NSURL *imageURL = [NSURL URLWithString:model.imgsrc];
+    [cell.iconView sd_setImageWithURL:imageURL];
     
 //    cell.textLabel.text = @(indexPath.row).description;
-    cell.textLabel.text = _newsList[indexPath.row].title;
+//    cell.textLabel.text = _newsList[indexPath.row].title;
     
     return cell;
     
@@ -83,7 +96,12 @@ static NSString *cellId = @"cellId";
         make.edges.equalTo(self.view);
     }];
     
-    [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
+//    [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
+    
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:cellId];
+    
+    tv.estimatedRowHeight = 100;
+    tv.rowHeight = UITableViewAutomaticDimension;
     
     tv.dataSource = self;
     tv.delegate = self;
