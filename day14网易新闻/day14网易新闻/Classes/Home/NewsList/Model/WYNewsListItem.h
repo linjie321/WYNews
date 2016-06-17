@@ -24,4 +24,6 @@
 
 @property (nonatomic ,assign) BOOL imgType;
 
+@property (nonatomic ,assign) BOOL hasHead;
+
 @end

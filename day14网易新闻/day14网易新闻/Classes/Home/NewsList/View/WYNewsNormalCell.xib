@@ -56,10 +56,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="iconView" destination="nPZ-X2-hBp" id="q6V-34-f1A"/>
-                <outlet property="replyLabel" destination="FX0-pu-lYx" id="OvY-fu-Mov"/>
-                <outlet property="sourceLabel" destination="0JQ-n0-AWe" id="qOK-yJ-pce"/>
-                <outlet property="titleLabel" destination="nnE-vy-Nld" id="Css-kU-WuC"/>
+                <outlet property="iconView" destination="nPZ-X2-hBp" id="2xG-Zk-5qd"/>
+                <outlet property="replyLabel" destination="FX0-pu-lYx" id="Nma-nd-F7v"/>
+                <outlet property="sourceLabel" destination="0JQ-n0-AWe" id="UON-pf-Z3a"/>
+                <outlet property="titleLabel" destination="nnE-vy-Nld" id="Kbb-Og-Ebq"/>
             </connections>
             <point key="canvasLocation" x="296" y="352.5"/>
         </tableViewCell>

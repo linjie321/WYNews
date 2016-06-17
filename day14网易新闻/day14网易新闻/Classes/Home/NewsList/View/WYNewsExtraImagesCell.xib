@@ -15,12 +15,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="166.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-dU-sbc">
-                        <rect key="frame" x="10" y="15" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6BC-aw-fXF">
                         <rect key="frame" x="10" y="47" width="93.5" height="87"/>
                         <constraints>
@@ -28,7 +22,7 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pnc-6r-aRd">
-                        <rect key="frame" x="113.5" y="47" width="93" height="87"/>
+                        <rect key="frame" x="114" y="47" width="93" height="87"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="87" id="tlB-c3-kGY"/>
                         </constraints>
@@ -49,6 +43,12 @@
                         <rect key="frame" x="278" y="143" width="31" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-dU-sbc">
+                        <rect key="frame" x="10" y="18" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -74,12 +74,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="iconView" destination="6BC-aw-fXF" id="kaF-YF-pSk"/>
-                <outlet property="replyLabel" destination="ihd-Bi-Z6u" id="ZYV-5z-Vv1"/>
-                <outlet property="sourceLabel" destination="A4F-pm-aLL" id="YDi-DQ-JeJ"/>
-                <outlet property="titleLabel" destination="KuT-dU-sbc" id="Mug-Za-wS4"/>
-                <outletCollection property="extraIcon" destination="Pnc-6r-aRd" id="C1X-9b-CDO"/>
-                <outletCollection property="extraIcon" destination="k1z-sl-Dbj" id="frg-qa-Ye9"/>
+                <outlet property="iconView" destination="6BC-aw-fXF" id="uuw-YV-wJX"/>
+                <outlet property="replyLabel" destination="ihd-Bi-Z6u" id="Keq-qg-V5Q"/>
+                <outlet property="sourceLabel" destination="A4F-pm-aLL" id="m1X-3s-mQl"/>
+                <outlet property="titleLabel" destination="KuT-dU-sbc" id="eLX-lW-dhW"/>
+                <outletCollection property="extraIcon" destination="Pnc-6r-aRd" id="U4W-FB-KtL"/>
+                <outletCollection property="extraIcon" destination="k1z-sl-Dbj" id="6V6-VK-3Ln"/>
             </connections>
             <point key="canvasLocation" x="422" y="441.5"/>
         </tableViewCell>

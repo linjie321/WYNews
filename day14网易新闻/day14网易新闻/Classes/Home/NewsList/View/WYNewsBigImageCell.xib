@@ -54,10 +54,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="iconView" destination="2kd-G2-REC" id="L5a-Sb-hfI"/>
-                <outlet property="replyLabel" destination="bRh-Gp-8AY" id="Ga3-gW-r66"/>
-                <outlet property="sourceLabel" destination="mng-bG-l0A" id="4Fo-Qu-MW3"/>
-                <outlet property="titleLabel" destination="Ob2-c5-0IJ" id="oZC-a7-t8B"/>
+                <outlet property="iconView" destination="2kd-G2-REC" id="PZU-GE-MUG"/>
+                <outlet property="replyLabel" destination="bRh-Gp-8AY" id="MyH-wr-RHk"/>
+                <outlet property="sourceLabel" destination="mng-bG-l0A" id="V07-yk-B0i"/>
+                <outlet property="titleLabel" destination="Ob2-c5-0IJ" id="ioh-yl-yTq"/>
             </connections>
             <point key="canvasLocation" x="335" y="328"/>
         </tableViewCell>

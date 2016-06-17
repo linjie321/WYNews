@@ -11,10 +11,11 @@
 #import <UIImageView+WebCache.h>
 #import "WYNewsCell.h"
 
-static NSString *cellId = @"cellId";
+
 static NSString *normalCellId = @"normalCellId";
 static NSString *extraCellId = @"extraCellId";
 static NSString *bigImageCellId = @"bigImageCellId";
+static NSString *headerCellId = @"headerCellId";
 
 @interface WYNewsListViewController () <UITableViewDataSource , UITableViewDelegate>
 
@@ -68,7 +69,9 @@ static NSString *bigImageCellId = @"bigImageCellId";
     WYNewsListItem *model = _newsList[indexPath.row];
     
     NSString *cellId;
-    if (model.imgType) {
+    if (model.hasHead) {
+        cellId = headerCellId;
+    } else if (model.imgType) {
         cellId = bigImageCellId;
     } else if (model.imgextra.count > 0) {
         cellId = extraCellId;
@@ -84,6 +87,15 @@ static NSString *bigImageCellId = @"bigImageCellId";
     
     NSURL *imageURL = [NSURL URLWithString:model.imgsrc];
     [cell.iconView sd_setImageWithURL:imageURL];
+    
+    NSInteger idx = 0;
+    for (NSDictionary *dict in model.imgextra) {
+        NSURL *url = [NSURL URLWithString:dict[@"imgsrc"]];
+        
+        UIImageView *iv = cell.extraIcon[idx++];
+        
+        [iv sd_setImageWithURL:url];
+    }
     
     return cell;
 }
@@ -102,6 +114,7 @@ static NSString *bigImageCellId = @"bigImageCellId";
     [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:normalCellId];
     [tv registerNib:[UINib nibWithNibName:@"WYNewsExtraImagesCell" bundle:nil] forCellReuseIdentifier:extraCellId];
     [tv registerNib:[UINib nibWithNibName:@"WYNewsBigImageCell" bundle:nil] forCellReuseIdentifier:bigImageCellId];
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsHeaderCell" bundle:nil] forCellReuseIdentifier:headerCellId];
     
     tv.estimatedRowHeight = 100;
     tv.rowHeight = UITableViewAutomaticDimension;
