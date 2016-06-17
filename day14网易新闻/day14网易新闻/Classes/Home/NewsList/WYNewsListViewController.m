@@ -81,22 +81,8 @@ static NSString *headerCellId = @"headerCellId";
     
     WYNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
-    cell.titleLabel.text = model.title;
-    cell.sourceLabel.text = model.source;
-    cell.replyLabel.text = @(model.replyCount).description;
-    
-    NSURL *imageURL = [NSURL URLWithString:model.imgsrc];
-    [cell.iconView sd_setImageWithURL:imageURL];
-    
-    NSInteger idx = 0;
-    for (NSDictionary *dict in model.imgextra) {
-        NSURL *url = [NSURL URLWithString:dict[@"imgsrc"]];
-        
-        UIImageView *iv = cell.extraIcon[idx++];
-        
-        [iv sd_setImageWithURL:url];
-    }
-    
+    cell.newsItem = model;
+       
     return cell;
 }
 

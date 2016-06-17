@@ -16,19 +16,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6BC-aw-fXF">
-                        <rect key="frame" x="10" y="47" width="93.5" height="87"/>
+                        <rect key="frame" x="10" y="47" width="93" height="87"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="87" id="hq4-Yn-zyM"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pnc-6r-aRd">
-                        <rect key="frame" x="114" y="47" width="93" height="87"/>
+                        <rect key="frame" x="113" y="47" width="93" height="87"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="87" id="tlB-c3-kGY"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1z-sl-Dbj">
-                        <rect key="frame" x="216" y="47" width="93.5" height="87"/>
+                        <rect key="frame" x="216" y="47" width="93" height="87"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="87" id="rQr-8g-vO6"/>
                         </constraints>
@@ -45,8 +45,8 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-dU-sbc">
-                        <rect key="frame" x="10" y="18" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-dU-sbc">
+                        <rect key="frame" x="10" y="15" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
