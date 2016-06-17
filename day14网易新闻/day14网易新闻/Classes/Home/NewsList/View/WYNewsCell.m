@@ -41,7 +41,7 @@
     _sourceLabel.text = newsItem.source;
     _replyLabel.text = @(newsItem.replyCount).description;
     
-    NSURL *imageURL = [NSURL URLWithString:newsItem.imgsrc];
+//    NSURL *imageURL = [NSURL URLWithString:newsItem.imgsrc];
 //    [_iconView sd_setImageWithURL:imageURL];
     [_iconView cz_setImageWithURLString:newsItem.imgsrc];
     
