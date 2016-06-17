@@ -8,10 +8,8 @@
 
 #import "WYNewsListViewController.h"
 #import "WYNewsListItem.h"
-#import "WYNewsNormalCell.h"
-#import "WYNewsExtraImagesCell.h"
 #import <UIImageView+WebCache.h>
-
+#import "WYNewsCell.h"
 
 static NSString *cellId = @"cellId";
 static NSString *normalCellId = @"normalCellId";
@@ -80,7 +78,7 @@ static NSString *extraCellId = @"extraCellId";
         cellId = normalCellId;
     }
     
-    WYNewsExtraImagesCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    WYNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
     cell.titleLabel.text = model.title;
     cell.sourceLabel.text = model.source;
