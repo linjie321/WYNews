@@ -8,8 +8,6 @@
 
 #import "WYNewsCell.h"
 #import "WYNewsListItem.h"
-#import <UIImageView+WebCache.h>
-
 
 @interface WYNewsCell()
 
@@ -44,15 +42,18 @@
     _replyLabel.text = @(newsItem.replyCount).description;
     
     NSURL *imageURL = [NSURL URLWithString:newsItem.imgsrc];
-    [_iconView sd_setImageWithURL:imageURL];
+//    [_iconView sd_setImageWithURL:imageURL];
+    [_iconView cz_setImageWithURLString:newsItem.imgsrc];
     
     NSInteger idx = 0;
     for (NSDictionary *dict in newsItem.imgextra) {
-        NSURL *url = [NSURL URLWithString:dict[@"imgsrc"]];
-        
-        UIImageView *iv = _extraIcon[idx++];
-        
-        [iv sd_setImageWithURL:url];
+//        NSURL *url = [NSURL URLWithString:dict[@"imgsrc"]];
+//        
+//        UIImageView *iv = _extraIcon[idx++];
+//        
+//        [iv sd_setImageWithURL:url];
+     
+        [_extraIcon[idx++] cz_setImageWithURLString:dict[@"imgsrc"]];
     }
 }
 
