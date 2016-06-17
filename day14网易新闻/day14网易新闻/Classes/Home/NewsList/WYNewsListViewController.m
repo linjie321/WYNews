@@ -14,6 +14,7 @@
 static NSString *cellId = @"cellId";
 static NSString *normalCellId = @"normalCellId";
 static NSString *extraCellId = @"extraCellId";
+static NSString *bigImageCellId = @"bigImageCellId";
 
 @interface WYNewsListViewController () <UITableViewDataSource , UITableViewDelegate>
 
@@ -40,8 +41,9 @@ static NSString *extraCellId = @"extraCellId";
 
 - (void)loadData {
     
-    [[CZNetworkManager sharedManager] newsListWithChannel:@"T1348649079062" start:0 completion:^(NSArray *array, NSError *error) {
-        NSLog(@"array");
+//    [[CZNetworkManager sharedManager] newsListWithChannel:@"T1348649079062" start:0 completion:^(NSArray *array, NSError *error) {
+    [[CZNetworkManager sharedManager] newsListWithChannel:@"T1348648517839" start:0 completion:^(NSArray *array, NSError *error) {
+    NSLog(@"array");
         
         NSArray *list = [NSArray yy_modelArrayWithClass:[WYNewsListItem class] json:array];
         
@@ -50,29 +52,25 @@ static NSString *extraCellId = @"extraCellId";
         [self.tableView reloadData];
         
     }];
-    
-    
 }
 
 
 #pragma mark - UITableViewDataSource 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return 20;
+    
     return _newsList.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
-    
-//    WYNewsNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
-    
     WYNewsListItem *model = _newsList[indexPath.row];
     
     NSString *cellId;
-    if (model.imgextra.count > 0) {
+    if (model.imgType) {
+        cellId = bigImageCellId;
+    } else if (model.imgextra.count > 0) {
         cellId = extraCellId;
     } else {
         cellId = normalCellId;
@@ -87,13 +85,8 @@ static NSString *extraCellId = @"extraCellId";
     NSURL *imageURL = [NSURL URLWithString:model.imgsrc];
     [cell.iconView sd_setImageWithURL:imageURL];
     
-//    cell.textLabel.text = @(indexPath.row).description;
-//    cell.textLabel.text = _newsList[indexPath.row].title;
-    
     return cell;
-    
 }
-
 
 #pragma mark - 搭建界面
 - (void)setupUI {
@@ -106,11 +99,9 @@ static NSString *extraCellId = @"extraCellId";
         make.edges.equalTo(self.view);
     }];
     
-//    [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
-    
     [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:normalCellId];
-    
     [tv registerNib:[UINib nibWithNibName:@"WYNewsExtraImagesCell" bundle:nil] forCellReuseIdentifier:extraCellId];
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsBigImageCell" bundle:nil] forCellReuseIdentifier:bigImageCellId];
     
     tv.estimatedRowHeight = 100;
     tv.rowHeight = UITableViewAutomaticDimension;

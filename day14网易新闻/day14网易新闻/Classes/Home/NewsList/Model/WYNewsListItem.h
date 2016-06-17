@@ -22,4 +22,6 @@
 
 @property (nonatomic ,strong) NSArray *imgextra;
 
+@property (nonatomic ,assign) BOOL imgType;
+
 @end
